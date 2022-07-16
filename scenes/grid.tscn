@@ -18,6 +18,9 @@ top_radius = 0.5
 bottom_radius = 0.0
 height = 1.0
 
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 60.0892, 0.641292, 129.436 )
+
 [node name="grid" type="Spatial"]
 
 [node name="GridMap" type="GridMap" parent="."]
@@ -35,6 +38,7 @@ __meta__ = {
 [node name="Camera" parent="." instance=ExtResource( 3 )]
 transform = Transform( 0.707107, -0.183239, 0.682952, 0, 0.96584, 0.259139, -0.707107, -0.183239, 0.682952, 0, 4, 0.739 )
 size = 8.0
+np_dice = NodePath("../dice")
 
 [node name="Pointer" type="MeshInstance" parent="."]
 mesh = SubResource( 2 )
