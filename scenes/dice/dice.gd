@@ -5,7 +5,7 @@ func is_class(name): return name == "Dice" || .is_class(name)
 func get_class(): return "Dice"
 
 export (float) var toss_force = 1
-export (float) var max_rot = 0.001
+export (float) var max_rot = 0.1
 
 func roll(direction, force = toss_force):
 	var rot = Vector3(
