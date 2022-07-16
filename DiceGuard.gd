@@ -20,6 +20,7 @@ func _process(_delta):
 				stop = true
 				
 				# TODO: Choose correct side and pass it into this function
+				# It needs side node (with 3d sprites)
 				emit_signal("rolled", SideGenerator.side_to_tile(null))
 		else:
 			stop = false
