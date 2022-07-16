@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/grid_placeholder.tres" type="ArrayMesh" id=1]
 [ext_resource path="res://scenes/gridclick.gd" type="Script" id=2]
 [ext_resource path="res://scenes/camera.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/TileAdder.gd" type="Script" id=4]
+[ext_resource path="res://scenes/Pointer.gd" type="Script" id=5]
 
 [sub_resource type="MeshLibrary" id=1]
 item/0/name = ""
@@ -35,9 +36,12 @@ __meta__ = {
 transform = Transform( 0.707107, -0.183239, 0.682952, 0, 0.96584, 0.259139, -0.707107, -0.183239, 0.682952, 0, 4, 0.739 )
 size = 8.0
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
+[node name="Pointer" type="MeshInstance" parent="."]
 mesh = SubResource( 2 )
 material/0 = null
+script = ExtResource( 5 )
+
+[node name="Tween" type="Tween" parent="Pointer"]
 
 [node name="TileAdder" type="Spatial" parent="."]
 script = ExtResource( 4 )

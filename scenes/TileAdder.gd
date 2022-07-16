@@ -8,13 +8,14 @@ var tileset = { "factory" : load("res://scenes/tiles/factory.tscn"),
 
 export var current_tile = "house"
 
+var plane = Plane(Vector3(0, 1, 0), 0)
+
 func _ready():
 	pass
 
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
 		var mouse_pos = get_viewport().get_mouse_position();
-		var plane = Plane(Vector3(0, 1, 0), 0)
 		var pos = plane.intersects_ray(
 			$"../Camera".project_ray_origin(mouse_pos),
 			$"../Camera".project_ray_normal(mouse_pos)
