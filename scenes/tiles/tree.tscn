@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/models/green.material" type="Material" id=1]
+[ext_resource path="res://scenes/tiles/tile.gd" type="Script" id=2]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Cube.002"
@@ -19,8 +20,11 @@ surfaces/0 = {
 }
 
 [node name="tile_tree" type="Spatial"]
+script = ExtResource( 2 )
 
 [node name="Mesh" type="MeshInstance" parent="."]
 transform = Transform( 0.5, 0, 0, 0, 0.05, 0, 0, 0, 0.5, 0, 0, 0 )
 mesh = SubResource( 1 )
 material/0 = null
+
+[node name="Tween" type="Tween" parent="."]

@@ -1,6 +1,7 @@
 extends RigidBody
 
 class_name Dice
+
 func is_class(name): return name == "Dice" || .is_class(name)
 func get_class(): return "Dice"
 
