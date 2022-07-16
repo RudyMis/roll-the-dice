@@ -18,4 +18,6 @@ func roll(direction, force = toss_force):
 	apply_torque_impulse(rot)
 
 func _ready():
-	pass
+	for side in $visual_sides.get_children():
+		var new_side = SideGenerator.create_side()
+		side.add_child(new_side)
