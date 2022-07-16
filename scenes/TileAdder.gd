@@ -40,6 +40,7 @@ func _unhandled_input(event):
 		var pos = approved_position()
 		if pos and current_tile and has_tile_near(Vector2(pos.x, pos.z)):
 			current_tile.translation = pos
+			current_tile.deactivate()
 			tiles.append(Vector2(pos.x, pos.z))
 			current_tile = null
 
@@ -56,8 +57,6 @@ func _process(_delta):
 			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		tween.start()
 		last_pos = pos
-	elif current_tile:
-		current_tile.visible = false
 
 
 func _on_roll(tile: Spatial):
