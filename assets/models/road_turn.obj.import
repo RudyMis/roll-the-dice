@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/road_turn.obj-65fec9f799bf6b0a1cd8ee06c73a7f78.mesh"
+
+[deps]
+
+files=[ "res://.import/road_turn.obj-65fec9f799bf6b0a1cd8ee06c73a7f78.mesh" ]
+
+source_file="res://assets/models/road_turn.obj"
+dest_files=[ "res://.import/road_turn.obj-65fec9f799bf6b0a1cd8ee06c73a7f78.mesh", "res://.import/road_turn.obj-65fec9f799bf6b0a1cd8ee06c73a7f78.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
