@@ -12,10 +12,22 @@ _global_script_classes=[ {
 "base": "RigidBody",
 "class": "Dice",
 "language": "GDScript",
-"path": "res://scenes/dice.gd"
+"path": "res://scenes/dice/dice.gd"
+}, {
+"base": "Resource",
+"class": "DiceSide",
+"language": "GDScript",
+"path": "res://resources/dice_side.gd"
+}, {
+"base": "Node",
+"class": "Field",
+"language": "GDScript",
+"path": "res://resources/filed.gd"
 } ]
 _global_script_class_icons={
-"Dice": ""
+"Dice": "",
+"DiceSide": "",
+"Field": ""
 }
 
 [application]
