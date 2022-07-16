@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/grid_placeholder.tres" type="ArrayMesh" id=1]
 [ext_resource path="res://scenes/gridclick.gd" type="Script" id=2]
 [ext_resource path="res://scenes/camera.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/TileAdder.gd" type="Script" id=4]
 
 [sub_resource type="MeshLibrary" id=1]
 item/0/name = ""
@@ -37,3 +38,7 @@ size = 8.0
 [node name="MeshInstance" type="MeshInstance" parent="."]
 mesh = SubResource( 2 )
 material/0 = null
+
+[node name="TileAdder" type="Spatial" parent="."]
+script = ExtResource( 4 )
+current_tile = "factory"
