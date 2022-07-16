@@ -19,7 +19,7 @@ height = 1.0
 [node name="grid" type="Spatial"]
 
 [node name="GridMap" type="GridMap" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.5, -0.25, 0.5 )
 mesh_library = SubResource( 1 )
 cell_size = Vector3( 2, 1, 2 )
 data = {
