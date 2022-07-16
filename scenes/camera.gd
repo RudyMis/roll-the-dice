@@ -1,5 +1,6 @@
 extends Camera
 
+
 export (float) var speed = -0.025
 export (NodePath) var np_dice
 
@@ -14,7 +15,6 @@ func _unhandled_input(event):
 		transformed.y = 0
 		print(transformed)
 		transform.origin += transformed
-
 
 func _on_roll_pressed():
 	if dice and dice.is_class("Dice"):
