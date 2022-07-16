@@ -12,7 +12,6 @@ func _process(delta):
 		pos3d.x = round(pos3d.x)
 		pos3d.z = round(pos3d.z)
 		if last_pos != pos3d and $"../TileAdder".tiles.find(Vector2(pos3d.x, pos3d.z)) == -1:
-			print("elo")
 			# animate movement
 			if $Tween.is_active():
 				$Tween.stop_all()
