@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/grid_placeholder.tres" type="ArrayMesh" id=1]
 [ext_resource path="res://scenes/dice/dice.tscn" type="PackedScene" id=2]
@@ -12,11 +12,6 @@ item/0/mesh = ExtResource( 1 )
 item/0/mesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 item/0/shapes = [  ]
 item/0/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-
-[sub_resource type="CylinderMesh" id=2]
-top_radius = 0.5
-bottom_radius = 0.0
-height = 1.0
 
 [sub_resource type="BoxShape" id=3]
 extents = Vector3( 1000, 1, 1000 )
@@ -47,10 +42,6 @@ enabled = true
 cast_to = Vector3( 0, -1, 0 )
 np_dice = NodePath("../dice")
 
-[node name="Pointer" type="MeshInstance" parent="."]
-mesh = SubResource( 2 )
-material/0 = null
-
 [node name="TileAdder" type="Spatial" parent="."]
 
 [node name="dice" parent="." instance=ExtResource( 2 )]
@@ -63,3 +54,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0 )
 shape = SubResource( 3 )
 
 [node name="Tween" type="Tween" parent="."]
+
+[connection signal="rolled" from="DiceGuard" to="." method="_on_roll"]

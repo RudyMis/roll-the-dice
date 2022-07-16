@@ -1,6 +1,6 @@
 extends RayCast
 
-signal Rolled
+signal rolled
 
 export (NodePath) var np_dice
 onready var dice = get_node(np_dice)
@@ -18,6 +18,9 @@ func _process(_delta):
 #				var colliding = 7 - int(collider.get_name()[5])
 #				print("Wyrzucono: " + String(colliding))
 				stop = true
+				
+				# TODO: Choose correct side and pass it into this function
+				emit_signal("rolled", SideGenerator.side_to_tile(null))
 		else:
 			stop = false
 	last_pos = pos
