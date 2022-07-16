@@ -7,4 +7,4 @@ func _ready():
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion and Input.is_action_pressed("mouse_right"):
-		transform = transform.translated(Vector3(event.relative.x, -event.relative.y, 0) * speed)
+		transform = transform.translated(Vector3(event.relative.x, 0, event.relative.y) * speed)
