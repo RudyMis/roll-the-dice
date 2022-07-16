@@ -1,6 +1,7 @@
 extends Camera
 
-export (float) var speed = -0.001
+
+export (float) var speed = -0.025
 export (NodePath) var np_dice
 
 onready var dice = get_node(np_dice)
@@ -10,8 +11,10 @@ func _ready():
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion and Input.is_action_pressed("mouse_right"):
-		transform = transform.translated(Vector3(event.relative.x, 0, event.relative.y) * speed)
-
+		var transformed = transform.basis.xform(Vector3(event.relative.x, 0, event.relative.y)) * speed
+		transformed.y = 0
+		print(transformed)
+		transform.origin += transformed
 
 func _on_roll_pressed():
 	if dice and dice.is_class("Dice"):
