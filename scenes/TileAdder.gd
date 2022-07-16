@@ -28,4 +28,3 @@ func _input(event):
 				tile_to_add.translation = pos
 				add_child(tile_to_add)
 				tiles.append(Vector2(pos.x, pos.z))
-				print("Dodano")
