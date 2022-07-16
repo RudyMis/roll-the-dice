@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "RigidBody",
+"class": "Dice",
+"language": "GDScript",
+"path": "res://scenes/dice.gd"
+} ]
+_global_script_class_icons={
+"Dice": ""
+}
+
 [application]
 
 config/name="roll-the-dice"
