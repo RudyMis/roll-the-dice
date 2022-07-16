@@ -1,0 +1,380 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/grid_shader_material.tres" type="Material" id=1]
+
+[sub_resource type="PlaneMesh" id=1]
+
+[node name="nice_grid" type="Spatial"]
+
+[node name="movable_segment" type="Spatial" parent="."]
+
+[node name="collumn" type="Spatial" parent="movable_segment"]
+
+[node name="left" type="MeshInstance" parent="movable_segment/collumn"]
+transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 7, 1, 0, 0 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front" type="MeshInstance" parent="movable_segment/collumn"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 1 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front5" type="MeshInstance" parent="movable_segment/collumn"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 3 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front6" type="MeshInstance" parent="movable_segment/collumn"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 5 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front2" type="MeshInstance" parent="movable_segment/collumn"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, -1 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front3" type="MeshInstance" parent="movable_segment/collumn"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, -3 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front4" type="MeshInstance" parent="movable_segment/collumn"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, -5 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="collumn2" type="Spatial" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
+
+[node name="left" type="MeshInstance" parent="movable_segment/collumn2"]
+transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 7, 1, 0, 0 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front" type="MeshInstance" parent="movable_segment/collumn2"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 1 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front5" type="MeshInstance" parent="movable_segment/collumn2"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 3 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front6" type="MeshInstance" parent="movable_segment/collumn2"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 5 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front2" type="MeshInstance" parent="movable_segment/collumn2"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, -1 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front3" type="MeshInstance" parent="movable_segment/collumn2"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, -3 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front4" type="MeshInstance" parent="movable_segment/collumn2"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, -5 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="collumn3" type="Spatial" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0 )
+
+[node name="left" type="MeshInstance" parent="movable_segment/collumn3"]
+transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 7, 1, 0, 0 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front" type="MeshInstance" parent="movable_segment/collumn3"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 1 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front5" type="MeshInstance" parent="movable_segment/collumn3"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 3 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front6" type="MeshInstance" parent="movable_segment/collumn3"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 5 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front2" type="MeshInstance" parent="movable_segment/collumn3"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, -1 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front3" type="MeshInstance" parent="movable_segment/collumn3"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, -3 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front4" type="MeshInstance" parent="movable_segment/collumn3"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, -5 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="collumn4" type="Spatial" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0 )
+
+[node name="left" type="MeshInstance" parent="movable_segment/collumn4"]
+transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 7, 1, 0, 0 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front" type="MeshInstance" parent="movable_segment/collumn4"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 1 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front5" type="MeshInstance" parent="movable_segment/collumn4"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 3 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front6" type="MeshInstance" parent="movable_segment/collumn4"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 5 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front2" type="MeshInstance" parent="movable_segment/collumn4"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, -1 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front3" type="MeshInstance" parent="movable_segment/collumn4"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, -3 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front4" type="MeshInstance" parent="movable_segment/collumn4"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, -5 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="collumn5" type="Spatial" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0 )
+
+[node name="left" type="MeshInstance" parent="movable_segment/collumn5"]
+transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 7, 1, 0, 0 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front" type="MeshInstance" parent="movable_segment/collumn5"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 1 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front5" type="MeshInstance" parent="movable_segment/collumn5"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 3 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front6" type="MeshInstance" parent="movable_segment/collumn5"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 5 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front2" type="MeshInstance" parent="movable_segment/collumn5"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, -1 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front3" type="MeshInstance" parent="movable_segment/collumn5"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, -3 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front4" type="MeshInstance" parent="movable_segment/collumn5"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, -5 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="collumn6" type="Spatial" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0 )
+
+[node name="left" type="MeshInstance" parent="movable_segment/collumn6"]
+transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 7, 1, 0, 0 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front" type="MeshInstance" parent="movable_segment/collumn6"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 1 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front5" type="MeshInstance" parent="movable_segment/collumn6"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 3 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front6" type="MeshInstance" parent="movable_segment/collumn6"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 5 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front2" type="MeshInstance" parent="movable_segment/collumn6"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, -1 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front3" type="MeshInstance" parent="movable_segment/collumn6"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, -3 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front4" type="MeshInstance" parent="movable_segment/collumn6"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, -5 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="collumn7" type="Spatial" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0 )
+
+[node name="left" type="MeshInstance" parent="movable_segment/collumn7"]
+transform = Transform( 0.1, 0, 0, 0, 1, 0, 0, 0, 7, 1, 0, 0 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front" type="MeshInstance" parent="movable_segment/collumn7"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 1 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front5" type="MeshInstance" parent="movable_segment/collumn7"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 3 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front6" type="MeshInstance" parent="movable_segment/collumn7"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 5 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front2" type="MeshInstance" parent="movable_segment/collumn7"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, -1 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front3" type="MeshInstance" parent="movable_segment/collumn7"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, -3 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="front4" type="MeshInstance" parent="movable_segment/collumn7"]
+transform = Transform( 0.9, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, -5 )
+layers = 2
+mesh = SubResource( 1 )
+skeleton = NodePath("../../..")
+material/0 = ExtResource( 1 )
+
+[node name="light" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+layers = 2
+light_energy = 0.0
+light_indirect_energy = 0.0
+light_cull_mask = 4293918722
+omni_range = 1.5
