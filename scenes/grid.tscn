@@ -3,7 +3,8 @@
 [ext_resource path="res://scenes/grid_placeholder.tres" type="ArrayMesh" id=1]
 [ext_resource path="res://scenes/gridclick.gd" type="Script" id=2]
 [ext_resource path="res://scenes/camera.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/dice.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/TileAdder.gd" type="Script" id=4]
+[ext_resource path="res://scenes/Pointer.gd" type="Script" id=5]
 
 [sub_resource type="MeshLibrary" id=1]
 item/0/name = ""
@@ -39,16 +40,13 @@ transform = Transform( 0.707107, -0.183239, 0.682952, 0, 0.96584, 0.259139, -0.7
 size = 8.0
 np_dice = NodePath("../dice")
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
+[node name="Pointer" type="MeshInstance" parent="."]
 mesh = SubResource( 2 )
 material/0 = null
+script = ExtResource( 5 )
 
-[node name="StaticBody" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.275943, 0 )
+[node name="Tween" type="Tween" parent="Pointer"]
 
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
-shape = SubResource( 3 )
-
-[node name="dice" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0663899, 2.57356, 0.245568 )
-toss_force = 10.0
+[node name="TileAdder" type="Spatial" parent="."]
+script = ExtResource( 4 )
+current_tile = "factory"
