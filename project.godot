@@ -35,6 +35,10 @@ _global_script_class_icons={
 config/name="roll-the-dice"
 config/icon="res://icon.png"
 
+[autoload]
+
+SideGenerator="*res://side_generator.gd"
+
 [global]
 
 cast=false
