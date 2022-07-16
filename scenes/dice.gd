@@ -5,7 +5,7 @@ func is_class(name): return name == "Dice" || .is_class(name)
 func get_class(): return "Dice"
 
 export (float) var toss_force = 1
-export (float) var max_rot = 0.005
+export (float) var max_rot = 0.001
 
 func roll(direction, force = toss_force):
 	var rot = Vector3(
@@ -18,5 +18,4 @@ func roll(direction, force = toss_force):
 	apply_torque_impulse(rot)
 
 func _ready():
-	yield(get_tree().create_timer(2), "timeout")
-	roll(Vector3.UP)
+	pass
