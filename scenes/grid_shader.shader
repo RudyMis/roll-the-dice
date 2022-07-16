@@ -11,6 +11,6 @@ void fragment() {
 
 void light() {
 	DIFFUSE_LIGHT = vec3(0.0);
-	//vec4 pixel = texture(tex, UV);
-	ALPHA = length(ATTENUATION);// * pixel.a;
+	vec4 pixel = texture(tex, UV);
+	ALPHA = length(ATTENUATION) * pixel.a;
 }
