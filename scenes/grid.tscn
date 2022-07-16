@@ -18,9 +18,6 @@ top_radius = 0.5
 bottom_radius = 0.0
 height = 1.0
 
-[sub_resource type="BoxShape" id=3]
-extents = Vector3( 60.0892, 0.641292, 129.436 )
-
 [node name="grid" type="Spatial"]
 
 [node name="GridMap" type="GridMap" parent="."]

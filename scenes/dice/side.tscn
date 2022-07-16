@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/dice/side.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/tree4.png" type="Texture" id=2]
+
+[node name="side" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="1" type="Sprite3D" parent="."]
+offset = Vector2( -256, 256 )
+texture = ExtResource( 2 )
+
+[node name="2" type="Sprite3D" parent="."]
+offset = Vector2( 256, 256 )
+texture = ExtResource( 2 )
+
+[node name="3" type="Sprite3D" parent="."]
+offset = Vector2( 256, -256 )
+texture = ExtResource( 2 )
+
+[node name="0" type="Sprite3D" parent="."]
+offset = Vector2( -256, -256 )
+texture = ExtResource( 2 )
