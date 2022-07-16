@@ -23,6 +23,10 @@ _global_script_class_icons={
 config/name="roll-the-dice"
 config/icon="res://icon.png"
 
+[global]
+
+cast=false
+
 [input]
 
 mouse_right={

@@ -1,3 +1,0 @@
-extends GridMap
-
-# Delete me
