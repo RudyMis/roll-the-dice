@@ -1,6 +1,5 @@
 extends Camera
 
-
 export (float) var speed = -0.025
 export (NodePath) var np_dice
 
@@ -17,7 +16,7 @@ func _unhandled_input(event):
 
 func _on_roll_pressed():
 	if dice and dice.is_class("Dice"):
-		var dice_target_position = viewport_to_map(get_viewport().size * Vector2(0.5, 0.75))
+		var dice_target_position = viewport_to_map(get_viewport().size * Vector2(0.5, 0.5))
 		
 		if dice_target_position:
 			dice.roll(Vector3.UP + (dice_target_position - dice.transform.origin) / 10)
