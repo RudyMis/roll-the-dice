@@ -64,10 +64,9 @@ func create_side(types = all_types):
 	
 	return side
 
+func side_to_tile(side):
+	# TODO: Create tile from side data
+	return load("res://scenes/tiles/house.tscn").instance()
+
 func _ready():
 	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
