@@ -37,7 +37,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-SideGenerator="*res://side_generator.gd"
+SideGenerator="*res://autoload/side_generator.gd"
 
 [global]
 
