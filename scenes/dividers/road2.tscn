@@ -20,8 +20,10 @@ surfaces/0 = {
 "vertex_count": 12
 }
 
-[node name="road_straight" type="Spatial"]
+[node name="road_straight" type="Spatial" groups=["road"]]
 script = ExtResource( 4 )
+type = "road"
+occupied_sides = [ true, false, true, false ]
 
 [node name="sprite" type="Sprite3D" parent="."]
 transform = Transform( -3.49691e-09, 0.08, -3.49691e-09, 0, -3.49691e-09, -0.08, -0.08, -3.49691e-09, 1.52855e-16, 0, 0, 0 )

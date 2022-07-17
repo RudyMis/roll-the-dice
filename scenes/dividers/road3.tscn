@@ -20,8 +20,10 @@ surfaces/0 = {
 "vertex_count": 29
 }
 
-[node name="road_cross_3" type="Spatial"]
+[node name="road_cross_3" type="Spatial" groups=["road"]]
 script = ExtResource( 4 )
+type = "road"
+occupied_sides = [ true, false, true, true ]
 
 [node name="mesh" type="MeshInstance" parent="."]
 transform = Transform( 50.01, 0, 0, 0, 50.01, 0, 0, 0, 50.01, 0, -0.074, 0 )

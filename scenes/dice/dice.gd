@@ -33,7 +33,6 @@ func _ready():
 		side.add_child(new_side)
 
 func _on_Dice_collision(body):
-	print("puk")
 	if randi() % 2 == 1:
 		$CollisionSound.stream = hit1
 	else:

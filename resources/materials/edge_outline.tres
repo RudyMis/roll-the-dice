@@ -51,12 +51,12 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id=2]
 shader = SubResource( 1 )
-shader_param/albedo = Color( 0, 0, 0, 1 )
+shader_param/albedo = Color( 1, 1, 1, 1 )
 shader_param/specular = null
 shader_param/metallic = null
-shader_param/roughness = 0.766
-shader_param/edge_strength = 0.402
-shader_param/edge_color = Color( 0.5, 0.5, 0.5, 1 )
+shader_param/roughness = 1.0
+shader_param/edge_strength = 1.0
+shader_param/edge_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="Shader" id=3]
 code = "shader_type spatial;
