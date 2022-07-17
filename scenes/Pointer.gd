@@ -21,5 +21,4 @@ func _process(_delta):
 				last_pos, pos3d, transition_speed,
 				Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 			$Tween.start()
-			#translation = pos3d
 			last_pos = pos3d

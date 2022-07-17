@@ -7,12 +7,12 @@ var tiles = []
 var current_tile = null
 var last_pos = Vector3(0, 0, 0)
 
+onready var camera = get_viewport().get_camera()
 onready var target_transform = transform
 onready var start_transform = transform
 
 onready var move_tween = $MoveTween
 
-onready var camera = $Camera
 onready var rotate_tween = $RotateTween
 
 func _ready():

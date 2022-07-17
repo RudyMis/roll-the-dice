@@ -1,0 +1,204 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/grid_shader_material.tres" type="Material" id=1]
+
+[sub_resource type="ArrayMesh" id=2]
+resource_name = "Cube"
+surfaces/0 = {
+"aabb": AABB( -0.9, 0, -0.9, 1.8, 1e-05, 1.8 ),
+"array_data": PoolByteArray( 203, 204, 76, 191, 0, 0, 0, 0, 102, 102, 102, 191, 0, 127, 129, 69, 28, 58, 0, 56, 212, 196, 51, 63, 0, 0, 0, 0, 203, 204, 76, 191, 0, 127, 149, 63, 227, 57, 170, 54, 206, 204, 76, 63, 0, 0, 0, 0, 102, 102, 102, 191, 0, 127, 141, 63, 227, 57, 0, 56, 214, 196, 51, 191, 0, 0, 0, 0, 206, 204, 76, 63, 0, 127, 129, 73, 28, 58, 85, 53, 203, 204, 76, 63, 0, 0, 0, 0, 102, 102, 102, 63, 0, 127, 129, 69, 227, 57, 0, 52, 208, 196, 51, 63, 0, 0, 0, 0, 206, 204, 76, 63, 0, 127, 149, 63, 227, 57, 85, 53, 205, 204, 76, 191, 0, 0, 0, 0, 212, 196, 51, 191, 0, 127, 129, 94, 85, 58, 56, 54, 102, 102, 102, 191, 0, 0, 0, 0, 203, 204, 76, 63, 0, 127, 190, 63, 0, 59, 199, 53, 205, 204, 76, 191, 0, 0, 0, 0, 217, 196, 51, 63, 0, 127, 178, 63, 85, 58, 199, 53, 205, 204, 76, 63, 0, 0, 0, 0, 212, 196, 51, 191, 0, 127, 191, 63, 170, 57, 56, 54, 102, 102, 102, 63, 0, 0, 0, 0, 206, 204, 76, 63, 0, 127, 129, 93, 0, 57, 199, 53, 102, 102, 102, 63, 0, 0, 0, 0, 203, 204, 76, 191, 0, 127, 179, 63, 0, 57, 56, 54, 206, 204, 76, 191, 0, 0, 0, 0, 102, 102, 102, 63, 0, 127, 141, 63, 28, 58, 0, 52, 205, 204, 76, 63, 0, 0, 0, 0, 217, 196, 51, 63, 0, 127, 129, 87, 170, 57, 199, 53, 212, 196, 51, 191, 0, 0, 0, 0, 203, 204, 76, 191, 0, 127, 129, 73, 28, 58, 170, 54, 102, 102, 102, 191, 0, 0, 0, 0, 206, 204, 76, 191, 0, 127, 129, 88, 0, 59, 56, 54 ),
+"array_index_data": PoolByteArray( 0, 0, 2, 0, 1, 0, 3, 0, 5, 0, 4, 0, 6, 0, 8, 0, 7, 0, 9, 0, 11, 0, 10, 0, 8, 0, 3, 0, 12, 0, 4, 0, 5, 0, 13, 0, 14, 0, 6, 0, 15, 0, 1, 0, 2, 0, 11, 0, 0, 0, 1, 0, 14, 0, 3, 0, 4, 0, 12, 0, 6, 0, 7, 0, 15, 0, 9, 0, 10, 0, 13, 0, 8, 0, 12, 0, 7, 0, 4, 0, 13, 0, 10, 0, 14, 0, 15, 0, 0, 0, 1, 0, 11, 0, 9, 0 ),
+"blend_shape_data": [  ],
+"format": 2194711,
+"index_count": 48,
+"name": "Material",
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 16
+}
+
+[node name="nice_grid" type="Spatial"]
+
+[node name="movable_segment" type="Spatial" parent="."]
+
+[node name="Cube" type="MeshInstance" parent="movable_segment"]
+layers = 2
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="Cube6" type="MeshInstance" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2 )
+layers = 2
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="Cube7" type="MeshInstance" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4 )
+layers = 2
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="Cube8" type="MeshInstance" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4 )
+layers = 2
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="Cube9" type="MeshInstance" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )
+layers = 2
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="Cube10" type="MeshInstance" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2 )
+layers = 2
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="Cube11" type="MeshInstance" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4 )
+layers = 2
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="Cube12" type="MeshInstance" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4 )
+layers = 2
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="Cube13" type="MeshInstance" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2 )
+layers = 2
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="Cube14" type="MeshInstance" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2 )
+layers = 2
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="Cube15" type="MeshInstance" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4 )
+layers = 2
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="Cube16" type="MeshInstance" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4 )
+layers = 2
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="Cube17" type="MeshInstance" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2 )
+layers = 2
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="Cube18" type="MeshInstance" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2 )
+layers = 2
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="Cube19" type="MeshInstance" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -4 )
+layers = 2
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="Cube20" type="MeshInstance" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4 )
+layers = 2
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="Cube21" type="MeshInstance" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2 )
+layers = 2
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="Cube22" type="MeshInstance" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -2 )
+layers = 2
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="Cube23" type="MeshInstance" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4 )
+layers = 2
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="Cube24" type="MeshInstance" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4 )
+layers = 2
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="Cube25" type="MeshInstance" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2 )
+layers = 2
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="Cube2" type="MeshInstance" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
+layers = 2
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="Cube3" type="MeshInstance" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0 )
+layers = 2
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="Cube4" type="MeshInstance" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0 )
+layers = 2
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="Cube5" type="MeshInstance" parent="movable_segment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0 )
+layers = 2
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
+
+[node name="light" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+layers = 2
+light_energy = 0.0
+light_indirect_energy = 0.0
+light_cull_mask = 4293918722
+omni_range = 1.5
