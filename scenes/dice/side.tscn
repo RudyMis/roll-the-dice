@@ -7,6 +7,10 @@
 transform = Transform( 0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 0, 0, 0 )
 script = ExtResource( 1 )
 
+[node name="0" type="Sprite3D" parent="."]
+offset = Vector2( -256, -256 )
+texture = ExtResource( 2 )
+
 [node name="1" type="Sprite3D" parent="."]
 offset = Vector2( -256, 256 )
 texture = ExtResource( 2 )
@@ -17,8 +21,4 @@ texture = ExtResource( 2 )
 
 [node name="3" type="Sprite3D" parent="."]
 offset = Vector2( 256, -256 )
-texture = ExtResource( 2 )
-
-[node name="0" type="Sprite3D" parent="."]
-offset = Vector2( -256, -256 )
 texture = ExtResource( 2 )
