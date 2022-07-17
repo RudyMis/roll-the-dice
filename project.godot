@@ -23,11 +23,17 @@ _global_script_classes=[ {
 "class": "Field",
 "language": "GDScript",
 "path": "res://resources/filed.gd"
+}, {
+"base": "Spatial",
+"class": "Tile",
+"language": "GDScript",
+"path": "res://scenes/tiles/tile.gd"
 } ]
 _global_script_class_icons={
 "Dice": "",
 "DiceSide": "",
-"Field": ""
+"Field": "",
+"Tile": ""
 }
 
 [application]

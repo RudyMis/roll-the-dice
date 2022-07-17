@@ -22,9 +22,9 @@ surfaces/0 = {
 [node name="tile_house" type="Spatial"]
 script = ExtResource( 2 )
 
-[node name="Mesh" type="MeshInstance" parent="."]
+[node name="mesh" type="MeshInstance" parent="."]
 transform = Transform( 0.5, 0, 0, 0, 0.05, 0, 0, 0, 0.5, 0, 0, 0 )
 mesh = SubResource( 1 )
 material/0 = null
 
-[node name="Tween" type="Tween" parent="."]
+[node name="sprite" type="Sprite3D" parent="."]
