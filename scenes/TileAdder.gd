@@ -13,7 +13,6 @@ onready var start_transform = transform
 
 onready var move_tween = $MoveTween
 
-onready var camera = $Camera
 onready var rotate_tween = $RotateTween
 
 func _ready():
