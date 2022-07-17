@@ -39,4 +39,6 @@ stream = ExtResource( 6 )
 [node name="TileRotateSound" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource( 5 )
 
+[connection signal="placed" from="." to="Camera" method="_on_tile_placed"]
+[connection signal="tile_chosen" from="Camera" to="DiceController" method="_set_dice_side"]
 [connection signal="rolled" from="DiceController" to="." method="_on_roll"]

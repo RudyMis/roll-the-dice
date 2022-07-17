@@ -15,6 +15,8 @@ export var start_lock_time = 0.5
 # Amount of time from cube stop to signal delivery.
 export var stop_countdown_time = 0.5
 
+var chosen_side = null
+
 var last_pos = translation
 var rolling = false
 var locked = false
@@ -41,14 +43,19 @@ func roll(direction):
 	lock_timer.start(start_lock_time)
 	dice.roll(direction)
 
+func _set_dice_side(side):
+	var par = chosen_side.get_parent()
+	par.remove_child(chosen_side)
+	chosen_side.call_deferred("queue_free")
+	par.add_child(side)
+
 func _on_StopCountdown_timeout():
 	var colliding = 7 - int(collider.get_name()[5])
-	print("Thrown: " + String(colliding))
 	rolling = false
 	timer.stop()
-	var side = dice.get_side(str(colliding - 1))
-	print(side)
-	emit_signal("rolled", side.duplicate())
+	chosen_side = dice.get_side(str(colliding - 1))
+	
+	emit_signal("rolled", chosen_side.duplicate())
 
 
 func _on_StartLock_timeout():

@@ -3,7 +3,7 @@ extends Node
 var ps_side = preload("res://scenes/dice/side.tscn")
 var all_types = ["factory", "house", "field", "shop", "water"]
 var all_dividers = ["road"]
-var divider_chance = 0.5
+var divider_chance = 0.25
 var field_directory = "res://scenes/tiles/"
 var divider_directory = "res://scenes/dividers/"
 
@@ -31,7 +31,7 @@ func create_divider(types = all_dividers):
 	# FIXME: Give correct path to mesh files
 	var divider_files = get_files(divider_directory, types[type], ".tscn")
 	if len(divider_files) == 0:
-		print("No meshes for type: ", types[type])
+		print("No files for type: ", types[type])
 		return null
 	var divider_idx = randi() % len(divider_files)
 	var ps_divider = load(divider_directory + divider_files[divider_idx])
@@ -51,10 +51,12 @@ func create_side(types = all_types):
 		var type = randi() % len(types)
 		var field_files = get_files(field_directory, types[type], ".tscn")
 		if len(field_files) == 0:
-			print("No textures for type: ", types[type])
+			print("No files for type: ", types[type])
 			continue
 		var field_idx = randi() % len(field_files)
-		side.set_field(str(i), load(field_directory + field_files[field_idx]).instance())
+		var field = load(field_directory + field_files[field_idx]).instance()
+		field.type = types[type]
+		side.set_field(str(i), field)
 	
 	var divider = create_divider()
 	if divider:

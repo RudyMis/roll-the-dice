@@ -4,8 +4,8 @@ class_name Tile
 func is_class(name): return name == "Tile" || .is_class(name)
 func get_class(): return "Tile"
 
-export (bool) var b_random_sprite = false
-export (String) var sprite_prefix = ""
+export (String) var type = ""
+export (Array, bool) var occupied_sides = [false, false, false, false]
 
 onready var mesh = $mesh
 onready var sprite = $sprite
@@ -14,11 +14,9 @@ func into_tile():
 	mesh.visible = true
 	sprite.visible = false
 
-func randomize_sprite():
-	pass
+func is_side_occupied(side: int):
+	return occupied_sides[side % len(occupied_sides)]
 
 func _ready():
-	if b_random_sprite:
-		randomize_sprite()
 	mesh.visible = false
 	sprite.visible = true

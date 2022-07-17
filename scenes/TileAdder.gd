@@ -1,5 +1,7 @@
 extends Spatial
 
+signal placed
+
 export (float) var transition_speed = 0.1
 export (float) var rotation_time = 0.4
 
@@ -29,6 +31,7 @@ func has_tile_near(pos: Vector2):
 		tiles.find(pos + Vector2(-1, 0)) != -1 or
 		tiles.find(pos + Vector2(0, 1)) != -1 or
 		tiles.find(pos + Vector2(0, -1)) != -1)
+
 
 func approved_position():
 	var pos = position_on_map()
@@ -70,8 +73,11 @@ func _unhandled_input(event):
 		if pos and current_tile and has_tile_near(Vector2(pos.x, pos.z)):
 			current_tile.translation = pos
 			tiles.append(Vector2(pos.x, pos.z))
-			current_tile = null
+			for i in range(4):
+				print(current_tile.get_side(i))
+			emit_signal("placed")
 			$TilePlaceSound.play()
+			current_tile = null
 			if nice_grid:
 				nice_grid.enable_main_tile()
 
@@ -87,7 +93,6 @@ func _process(_delta):
 			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		move_tween.start()
 		last_pos = pos
-
 
 func _on_roll(tile: Spatial):
 	if current_tile != null:

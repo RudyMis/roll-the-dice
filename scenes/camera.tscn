@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/camera.gd" type="Script" id=1]
 [ext_resource path="res://scenes/MusicPlayer.gd" type="Script" id=2]
+[ext_resource path="res://scenes/gui/new_tile_gui.tscn" type="PackedScene" id=3]
 
 [node name="Camera" type="Camera"]
 transform = Transform( 1, 0, 0, 0, 0.96584, 0.259139, 0, -0.259139, 0.96584, 0, 0.497337, 0.738902 )
@@ -20,17 +21,36 @@ custom_constants/margin_left = 20
 custom_constants/margin_bottom = 20
 
 [node name="Button" type="Button" parent="CanvasLayer/MarginContainer"]
-margin_left = 435.0
+margin_left = 480.0
 margin_top = 540.0
-margin_right = 589.0
+margin_right = 544.0
 margin_bottom = 580.0
 rect_min_size = Vector2( 40, 40 )
 size_flags_horizontal = 4
 size_flags_vertical = 8
-text = "Dzien dobry"
+text = "Roll"
+
+[node name="new_tile_gui" parent="CanvasLayer/MarginContainer" instance=ExtResource( 3 )]
+visible = false
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1004.0
+margin_bottom = 580.0
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 script = ExtResource( 2 )
 
+[node name="0" type="Spatial" parent="."]
+transform = Transform( -1, 8.74228e-08, 0, 3.82137e-15, 4.37114e-08, 1, 8.74228e-08, 1, -4.37114e-08, -3, 0.816, -3.51 )
+
+[node name="1" type="Spatial" parent="."]
+transform = Transform( -1, 8.74228e-08, 0, 3.82137e-15, 4.37114e-08, 1, 8.74228e-08, 1, -4.37114e-08, 0, 0.816323, -3.51016 )
+
+[node name="2" type="Spatial" parent="."]
+transform = Transform( -1, 8.74228e-08, 0, 3.82137e-15, 4.37114e-08, 1, 8.74228e-08, 1, -4.37114e-08, 3, 0.816, -3.51 )
+
 [connection signal="pressed" from="CanvasLayer/MarginContainer/Button" to="." method="_on_roll_pressed"]
+[connection signal="tile_chosen" from="CanvasLayer/MarginContainer/new_tile_gui" to="." method="_on_new_tile_chosen"]
 [connection signal="finished" from="MusicPlayer" to="MusicPlayer" method="_on_MusicPlayer_finished"]
