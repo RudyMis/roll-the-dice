@@ -28,3 +28,5 @@ script = ExtResource( 8 )
 [node name="Tween" type="Tween" parent="nice_grid"]
 
 [node name="DiceController" parent="." instance=ExtResource( 1 )]
+
+[connection signal="rolled" from="DiceController" to="." method="_on_roll"]
