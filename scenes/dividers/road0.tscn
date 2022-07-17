@@ -29,7 +29,6 @@ occupied_sides = [ true, false, false, false ]
 transform = Transform( 50, 0, 0, 0, 10, 0, 0, 0, 50, 0, 0, 0 )
 mesh = SubResource( 1 )
 material/0 = null
-material/1 = null
 
 [node name="sprite" type="Sprite3D" parent="."]
 transform = Transform( -3.49691e-09, 0.08, -3.49691e-09, 0, -3.49691e-09, -0.08, -0.08, -3.49691e-09, 1.52855e-16, 0, 0, 0 )
