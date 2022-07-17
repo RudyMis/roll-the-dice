@@ -4,6 +4,7 @@ var songs = []
 var current = -1
 
 func _ready():
+	randomize()
 	songs.append(load("res://assets/sounds/music/chosic-calm-and-peaceful.ogg"))
 	songs.append(load("res://assets/sounds/music/chosic-downtown-glow.ogg"))
 	songs.append(load("res://assets/sounds/music/chosic-glow.ogg"))
