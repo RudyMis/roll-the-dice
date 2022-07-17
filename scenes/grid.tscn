@@ -1,15 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scenes/dice/dice.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/DiceController.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/camera.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/TileAdder.gd" type="Script" id=4]
-[ext_resource path="res://scenes/DiceController.gd" type="Script" id=5]
-[ext_resource path="res://scenes/DiceGuard.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/nice_grid.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/nice_grid.gd" type="Script" id=8]
-
-[sub_resource type="BoxShape" id=3]
-extents = Vector3( 1000, 1, 1000 )
 
 [node name="grid" type="Spatial"]
 script = ExtResource( 4 )
@@ -30,30 +25,4 @@ script = ExtResource( 8 )
 
 [node name="Tween" type="Tween" parent="nice_grid"]
 
-[node name="DiceController" type="Spatial" parent="."]
-script = ExtResource( 5 )
-
-[node name="Dice" parent="DiceController" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.23287, 1.47664, -3.58451 )
-
-[node name="DiceGuard" parent="DiceController" instance=ExtResource( 6 )]
-transform = Transform( 0.707107, -0.183239, 0.682952, 0, 0.96584, 0.259139, -0.707107, -0.183239, 0.682952, -63.8958, 108.466, 152.658 )
-enabled = true
-cast_to = Vector3( 0, -1, 0 )
-
-[node name="DiceFloor" type="StaticBody" parent="DiceController"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="DiceController/DiceFloor"]
-shape = SubResource( 3 )
-
-[node name="StopCountdown" type="Timer" parent="DiceController"]
-wait_time = 0.5
-one_shot = true
-
-[node name="StartLock" type="Timer" parent="DiceController"]
-one_shot = true
-
-[connection signal="rolled" from="DiceController" to="." method="_on_roll"]
-[connection signal="timeout" from="DiceController/StopCountdown" to="DiceController" method="_on_StopCountdown_timeout"]
-[connection signal="timeout" from="DiceController/StartLock" to="DiceController" method="_on_StartLock_timeout"]
+[node name="DiceController" parent="." instance=ExtResource( 1 )]
