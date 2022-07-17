@@ -90,3 +90,4 @@ func _on_roll(tile: Spatial):
 		return
 	current_tile = tile
 	add_child(current_tile)
+	tile.into_tile()
