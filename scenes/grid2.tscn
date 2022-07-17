@@ -48,13 +48,11 @@ __meta__ = {
 transform = Transform( 0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 0, 4, 0.739 )
 projection = 1
 size = 8.0
-np_dice = NodePath("../dice")
 
 [node name="DiceGuard" parent="." instance=ExtResource( 5 )]
 transform = Transform( 0.707107, -0.183239, 0.682952, 0, 0.96584, 0.259139, -0.707107, -0.183239, 0.682952, -63.8958, 108.466, 152.658 )
 enabled = true
 cast_to = Vector3( 0, -1, 0 )
-np_dice = NodePath("../dice")
 
 [node name="Pointer" type="MeshInstance" parent="."]
 mesh = SubResource( 2 )
