@@ -94,4 +94,6 @@ func _on_roll(tile: Spatial):
 		nice_grid.disable_main_tile()
 	current_tile = tile
 	add_child(current_tile)
+	start_transform = current_tile.transform
+	target_transform = current_tile.transform
 	tile.into_tile()
