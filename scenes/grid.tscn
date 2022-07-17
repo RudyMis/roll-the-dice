@@ -13,6 +13,7 @@ script = ExtResource( 4 )
 transform = Transform( 0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 0, 4, 0.739 )
 projection = 1
 size = 8.0
+speed = -0.01
 np_dice_controller = NodePath("../DiceController")
 
 [node name="TileAdder" type="Spatial" parent="."]
@@ -28,3 +29,5 @@ script = ExtResource( 8 )
 [node name="Tween" type="Tween" parent="nice_grid"]
 
 [node name="DiceController" parent="." instance=ExtResource( 1 )]
+
+[connection signal="rolled" from="DiceController" to="." method="_on_roll"]
