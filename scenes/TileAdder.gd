@@ -16,7 +16,7 @@ onready var move_tween = $MoveTween
 onready var rotate_tween = $RotateTween
 
 func _ready():
-	pass
+	tiles.append( Vector2(0, 0) )
 
 func position_on_map():
 	var plane = Plane(Vector3(0, 1, 0), 0)
