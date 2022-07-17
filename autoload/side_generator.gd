@@ -1,7 +1,7 @@
 extends Node
 
 var ps_side = preload("res://scenes/dice/side.tscn")
-var all_types = ["factory", "house", "field", "water"]
+var all_types = ["factory", "house", "field", "shop", "water"]
 var all_dividers = ["road"]
 var divider_chance = 0.5
 var field_directory = "res://scenes/tiles/"

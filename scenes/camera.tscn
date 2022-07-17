@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/camera.gd" type="Script" id=1]
+[ext_resource path="res://scenes/MusicPlayer.gd" type="Script" id=2]
 
 [node name="Camera" type="Camera"]
 transform = Transform( 1, 0, 0, 0, 0.96584, 0.259139, 0, -0.259139, 0.96584, 0, 0.497337, 0.738902 )
@@ -28,4 +29,8 @@ size_flags_horizontal = 4
 size_flags_vertical = 8
 text = "Dzien dobry"
 
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+script = ExtResource( 2 )
+
 [connection signal="pressed" from="CanvasLayer/MarginContainer/Button" to="." method="_on_roll_pressed"]
+[connection signal="finished" from="MusicPlayer" to="MusicPlayer" method="_on_MusicPlayer_finished"]
