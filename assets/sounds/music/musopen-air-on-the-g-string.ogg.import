@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/musopen-air-on-the-g-string.ogg-3570b754039fc8e6e41ff95e6bc9e33d.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/music/musopen-air-on-the-g-string.ogg"
+dest_files=[ "res://.import/musopen-air-on-the-g-string.ogg-3570b754039fc8e6e41ff95e6bc9e33d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

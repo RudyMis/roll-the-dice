@@ -52,15 +52,17 @@ func _input(event):
 		start_transform = current_tile.transform
 		target_transform = target_transform.rotated(Vector3.UP, -PI / 2)
 		rotate_tween.remove_all()
-		rotate_tween.interpolate_method(self, "call_interpolation", 0, 1, rotation_time, Tween.TRANS_BACK, Tween.EASE_IN)
+		rotate_tween.interpolate_method(self, "call_interpolation", 0, 1, rotation_time, Tween.TRANS_BACK, Tween.EASE_OUT)
 		rotate_tween.start()
+		$TileRotateSound.play()
 	
 	if Input.is_action_just_pressed("right") and current_tile:
 		start_transform = current_tile.transform
 		target_transform = target_transform.rotated(Vector3.UP, PI / 2)
 		rotate_tween.remove_all()
-		rotate_tween.interpolate_method(self, "call_interpolation", 0, 1, rotation_time, Tween.TRANS_BACK, Tween.EASE_IN)
+		rotate_tween.interpolate_method(self, "call_interpolation", 0, 1, rotation_time, Tween.TRANS_BACK, Tween.EASE_OUT)
 		rotate_tween.start()
+		$TileRotateSound.play()
 
 func _unhandled_input(event):
 	if event is InputEventMouseButton and Input.is_action_pressed("mouse_left"):
@@ -69,6 +71,7 @@ func _unhandled_input(event):
 			current_tile.translation = pos
 			tiles.append(Vector2(pos.x, pos.z))
 			current_tile = null
+			$TilePlaceSound.play()
 
 func _process(_delta):
 	var pos = approved_position()

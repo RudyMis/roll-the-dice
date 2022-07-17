@@ -16,6 +16,14 @@ script = ExtResource( 1 )
 [node name="Dice" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 physics_material_override = SubResource( 3 )
+contacts_reported = 1
+contact_monitor = true
+
+[node name="CollisionSound" type="AudioStreamPlayer3D" parent="Dice"]
+unit_db = 0.1
+unit_size = 0.5
+max_db = 1.0
+autoplay = true
 
 [node name="DiceGuard" parent="." instance=ExtResource( 2 )]
 transform = Transform( 0.707107, -0.183239, 0.682952, 0, 0.96584, 0.259139, -0.707107, -0.183239, 0.682952, -63.8958, 108.466, 152.658 )
@@ -34,5 +42,6 @@ one_shot = true
 [node name="StartLock" type="Timer" parent="."]
 one_shot = true
 
+[connection signal="body_entered" from="Dice" to="Dice" method="_on_Dice_collision"]
 [connection signal="timeout" from="StopCountdown" to="." method="_on_StopCountdown_timeout"]
 [connection signal="timeout" from="StartLock" to="." method="_on_StartLock_timeout"]
