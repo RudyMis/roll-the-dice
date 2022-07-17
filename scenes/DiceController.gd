@@ -46,9 +46,9 @@ func _on_StopCountdown_timeout():
 	print("Thrown: " + String(colliding))
 	rolling = false
 	timer.stop()
-	# TODO: Choose correct side and pass it into this function
-	# It needs side node (with 3d sprites)
-	emit_signal("rolled", SideGenerator.side_to_tile(null))
+	var side = dice.get_side(str(colliding - 1))
+	print(side)
+	emit_signal("rolled", side.duplicate())
 
 
 func _on_StartLock_timeout():

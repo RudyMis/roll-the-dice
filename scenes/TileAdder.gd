@@ -12,8 +12,8 @@ onready var target_transform = transform
 onready var start_transform = transform
 
 onready var move_tween = $MoveTween
-
 onready var rotate_tween = $RotateTween
+onready var nice_grid = $nice_grid
 
 func _ready():
 	tiles.append( Vector2(0, 0) )
@@ -47,7 +47,7 @@ func call_interpolation(weight):
 		target_transform.origin = current_tile.transform.origin
 		current_tile.transform = start_transform.interpolate_with(target_transform, weight)
 
-func _input(event):
+func _input(_event):
 	if Input.is_action_just_pressed("left") and current_tile:
 		start_transform = current_tile.transform
 		target_transform = target_transform.rotated(Vector3.UP, -PI / 2)
@@ -72,6 +72,8 @@ func _unhandled_input(event):
 			tiles.append(Vector2(pos.x, pos.z))
 			current_tile = null
 			$TilePlaceSound.play()
+			if nice_grid:
+				nice_grid.enable_main_tile()
 
 func _process(_delta):
 	var pos = approved_position()
@@ -91,6 +93,8 @@ func _on_roll(tile: Spatial):
 	if current_tile != null:
 		print("Rolled before we placed previous tile")
 		return
+	if nice_grid:
+		nice_grid.disable_main_tile()
 	current_tile = tile
 	add_child(current_tile)
 	tile.into_tile()

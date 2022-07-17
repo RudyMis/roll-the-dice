@@ -17,7 +17,7 @@ func _unhandled_input(event):
 func _on_roll_pressed():
 	var dice = dice_controller.get_node("Dice")
 	if dice and dice.is_class("Dice"):
-		var dice_target_position = viewport_to_map(get_viewport().size * Vector2(0.5, 0.5))
+		var dice_target_position = viewport_to_map(get_viewport().size * Vector2(0.5, 0.75))
 		
 		if dice_target_position:
 			dice_controller.roll(Vector3.UP + (dice_target_position - dice.transform.origin) / 10)

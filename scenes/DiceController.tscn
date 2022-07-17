@@ -18,6 +18,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 physics_material_override = SubResource( 3 )
 contacts_reported = 1
 contact_monitor = true
+toss_force = 0.6
 
 [node name="CollisionSound" type="AudioStreamPlayer3D" parent="Dice"]
 unit_db = 0.1
