@@ -28,7 +28,6 @@ script = ExtResource( 8 )
 [node name="Tween" type="Tween" parent="nice_grid"]
 
 [node name="DiceController" parent="." instance=ExtResource( 1 )]
-
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2 )
 
 [node name="oracle" parent="." instance=ExtResource( 2 )]
