@@ -17,7 +17,9 @@ np_dice_controller = NodePath("../DiceController")
 
 [node name="TileAdder" type="Spatial" parent="."]
 
-[node name="Tween" type="Tween" parent="."]
+[node name="MoveTween" type="Tween" parent="."]
+
+[node name="RotateTween" type="Tween" parent="."]
 
 [node name="nice_grid" parent="." instance=ExtResource( 7 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.06, 0 )
