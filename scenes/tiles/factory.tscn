@@ -66,7 +66,7 @@ surfaces/3 = {
 script = ExtResource( 5 )
 
 [node name="sprite" type="Sprite3D" parent="."]
-transform = Transform( -0.08, -6.99382e-09, -3.0571e-16, 0, -3.49691e-09, 0.08, -6.99382e-09, 0.08, 3.49691e-09, 0, 0, 0 )
+transform = Transform( -0.2, -3.01992e-08, -1.32005e-15, 0, -8.74228e-09, 0.2, -3.01992e-08, 0.2, 8.74228e-09, 0, 0, 0 )
 centered = false
 texture = ExtResource( 6 )
 
