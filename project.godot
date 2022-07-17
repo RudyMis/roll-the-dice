@@ -39,6 +39,7 @@ _global_script_class_icons={
 [application]
 
 config/name="roll-the-dice"
+run/main_scene="res://scenes/grid.tscn"
 config/icon="res://icon.png"
 
 [autoload]

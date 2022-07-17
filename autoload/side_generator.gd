@@ -4,7 +4,7 @@ var ps_side = preload("res://scenes/dice/side.tscn")
 var all_types = ["factory", "house", "tree", "water"]
 var all_dividers = ["road"]
 var divider_chance = 0.5
-var field_directory = "res://assets/sprites/"
+var field_directory = "res://scenes/tiles/"
 var divider_directory = "res://scenes/dividers/"
 
 func get_files(directory: String, prefix: String, sufix: String):
@@ -38,8 +38,7 @@ func create_divider(types = all_dividers):
 	if ps_divider and ps_divider.has_method("instance"):
 		var divider = ps_divider.instance()
 		var direction = randi() % 4
-		divider.rotate_x(-PI / 2)
-		divider.rotate_z(direction * PI / 2)
+		divider.rotate_y(direction * PI / 2)
 		return divider
 	return null
 
@@ -55,7 +54,7 @@ func create_side(types = all_types):
 			print("No textures for type: ", types[type])
 			continue
 		var field_idx = randi() % len(field_files)
-		side.set_field(str(i), load(field_directory + field_files[field_idx]))
+		side.set_field(str(i), load(field_directory + field_files[field_idx]).instance())
 	
 	var divider = create_divider()
 	if divider:

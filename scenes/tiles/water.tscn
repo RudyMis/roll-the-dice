@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/models/tiles/water.material" type="Material" id=1]
+[ext_resource path="res://scenes/tiles/tile.gd" type="Script" id=2]
+[ext_resource path="res://assets/sprites/water1.png" type="Texture" id=3]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Cube.012"
@@ -19,8 +21,14 @@ surfaces/0 = {
 }
 
 [node name="water" type="Spatial"]
+script = ExtResource( 2 )
 
-[node name="water" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005, 0, -0.005 )
+[node name="mesh" type="MeshInstance" parent="."]
+transform = Transform( 40, 0, 0, 0, 40, 0, 0, 0, 40, 0.005, 0, -0.005 )
 mesh = SubResource( 1 )
 material/0 = null
+
+[node name="sprite" type="Sprite3D" parent="."]
+transform = Transform( -0.08, -6.99382e-09, -3.0571e-16, 0, -3.49691e-09, 0.08, -6.99382e-09, 0.08, 3.49691e-09, 0, 0, 0 )
+centered = false
+texture = ExtResource( 3 )
