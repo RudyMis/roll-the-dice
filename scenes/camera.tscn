@@ -19,9 +19,9 @@ custom_constants/margin_left = 20
 custom_constants/margin_bottom = 20
 
 [node name="Button" type="Button" parent="CanvasLayer/MarginContainer"]
-margin_left = 467.0
+margin_left = 435.0
 margin_top = 540.0
-margin_right = 556.0
+margin_right = 589.0
 margin_bottom = 580.0
 rect_min_size = Vector2( 40, 40 )
 size_flags_horizontal = 4

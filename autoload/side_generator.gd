@@ -1,7 +1,7 @@
 extends Node
 
 var ps_side = preload("res://scenes/dice/side.tscn")
-var all_types = ["factory", "house", "tree", "water"]
+var all_types = ["factory", "house", "field", "water"]
 var all_dividers = ["road"]
 var divider_chance = 0.5
 var field_directory = "res://scenes/tiles/"
@@ -64,7 +64,6 @@ func create_side(types = all_types):
 	return side
 
 func side_to_tile(side):
-	# TODO: Create tile from side data
 	return load("res://scenes/tiles/house.tscn").instance()
 
 func _ready():

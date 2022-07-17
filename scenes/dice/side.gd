@@ -6,5 +6,11 @@ func set_field(nr: String, field: Spatial):
 		field.transform = node.transform
 		add_child(field)
 
+func into_tile():
+	for child in get_children():
+		if not child is Tile:
+			continue
+		child.into_tile()
+
 func _ready():
 	pass # Replace with function body.
