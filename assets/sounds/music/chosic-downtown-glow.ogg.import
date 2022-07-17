@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/chosic-downtown-glow.ogg-0547872ad815e0b9038232986b369470.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/music/chosic-downtown-glow.ogg"
+dest_files=[ "res://.import/chosic-downtown-glow.ogg-0547872ad815e0b9038232986b369470.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

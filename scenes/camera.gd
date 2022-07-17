@@ -24,4 +24,4 @@ func _on_roll_pressed():
 
 func viewport_to_map(pos: Vector2):
 	var dropPlane  = Plane(Vector3(0, 1, 0), 0)
-	return dropPlane.intersects_ray($"../Camera".project_ray_origin(pos), $"../Camera".project_ray_normal(pos))
+	return dropPlane.intersects_ray(project_ray_origin(pos), project_ray_normal(pos))

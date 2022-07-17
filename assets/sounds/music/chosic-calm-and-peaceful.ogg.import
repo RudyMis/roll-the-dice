@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/chosic-calm-and-peaceful.ogg-018dfdbfd49b7d08f647143777fb61ee.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/music/chosic-calm-and-peaceful.ogg"
+dest_files=[ "res://.import/chosic-calm-and-peaceful.ogg-018dfdbfd49b7d08f647143777fb61ee.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

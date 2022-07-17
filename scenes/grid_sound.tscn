@@ -1,0 +1,40 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/DiceController.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/tiles/oracle.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/camera_with_sound.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/TileAdder.gd" type="Script" id=4]
+[ext_resource path="res://assets/sounds/rotate_tile.wav" type="AudioStream" id=5]
+[ext_resource path="res://assets/sounds/place_tile.wav" type="AudioStream" id=6]
+[ext_resource path="res://scenes/nice_grid.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/nice_grid.gd" type="Script" id=8]
+
+[node name="grid" type="Spatial"]
+script = ExtResource( 4 )
+
+[node name="Camera2" parent="." instance=ExtResource( 3 )]
+np_dice_controller = NodePath("../DiceController")
+
+[node name="MoveTween" type="Tween" parent="."]
+
+[node name="RotateTween" type="Tween" parent="."]
+
+[node name="nice_grid" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.06, 0 )
+script = ExtResource( 8 )
+
+[node name="Tween" type="Tween" parent="nice_grid"]
+
+[node name="DiceController" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2 )
+
+[node name="oracle" parent="." instance=ExtResource( 2 )]
+transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0 )
+
+[node name="TilePlaceSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="TileRotateSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[connection signal="rolled" from="DiceController" to="." method="_on_roll"]

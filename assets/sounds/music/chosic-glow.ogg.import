@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/chosic-glow.ogg-dbcc0149d56ec155a3db7d5a651abd75.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/music/chosic-glow.ogg"
+dest_files=[ "res://.import/chosic-glow.ogg-dbcc0149d56ec155a3db7d5a651abd75.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
