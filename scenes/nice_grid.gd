@@ -3,9 +3,21 @@ extends Spatial
 var last_pos = Vector3(0, 0, 0)
 const plane  = Plane(Vector3(0, 1, 0), 0)
 
+export (NodePath) var np_main_tile
 export var transition_speed = 0.1
 
-func _process(delta):
+onready var main_tile = get_node(np_main_tile)
+
+
+func disable_main_tile():
+	if main_tile:
+		main_tile.visible = false
+
+func enable_main_tile():
+	if main_tile:
+		main_tile.visible = true
+
+func _process(_delta):
 	var pos2d = get_viewport().get_mouse_position()
 	var pos3d = plane.intersects_ray($"../Camera".project_ray_origin(pos2d),$"../Camera".project_ray_normal(pos2d))
 	if (pos3d != null):
