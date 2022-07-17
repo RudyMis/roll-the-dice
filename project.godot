@@ -38,8 +38,10 @@ _global_script_class_icons={
 
 [application]
 
-config/name="roll-the-dice"
+config/name="The Madman's Sky City Builder"
 run/main_scene="res://scenes/grid.tscn"
+run/disable_stdout=true
+run/disable_stderr=true
 config/icon="res://icon.png"
 
 [autoload]
