@@ -45,18 +45,10 @@ config/icon="res://icon.png"
 
 SideGenerator="*res://autoload/side_generator.gd"
 
-[display]
-
-window/dpi/allow_hidpi=true
-
 [global]
 
 cast=false
-hidpi=true
-
-[gui]
-
-theme/use_hidpi=true
+hidpi=false
 
 [input]
 
@@ -93,5 +85,4 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
-quality/filters/msaa=1
 environment/default_environment="res://default_env.tres"
