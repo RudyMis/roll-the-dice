@@ -6,7 +6,7 @@ var tiles = []
 var current_tile = null
 var last_pos = Vector3(0, 0, 0)
 
-onready var camera = $Camera
+onready var camera = get_viewport().get_camera()
 onready var tween = $Tween
 
 func _ready():

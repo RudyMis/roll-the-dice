@@ -65,7 +65,6 @@ script = ExtResource( 3 )
 
 [node name="TileAdder" type="Spatial" parent="."]
 script = ExtResource( 1 )
-current_tile = "tree"
 
 [node name="dice" parent="." instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.23287, 1.47664, -3.58451 )

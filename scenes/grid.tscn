@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/grid_placeholder.tres" type="ArrayMesh" id=1]
 [ext_resource path="res://scenes/dice/dice.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/camera.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/TileAdder.gd" type="Script" id=4]
 [ext_resource path="res://scenes/DiceGuard.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/nice_grid.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/nice_grid.gd" type="Script" id=8]
 
 [sub_resource type="MeshLibrary" id=1]
 item/0/name = ""
@@ -21,6 +23,7 @@ script = ExtResource( 4 )
 
 [node name="GridMap" type="GridMap" parent="."]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.5, -0.25, 0.5 )
+visible = false
 mesh_library = SubResource( 1 )
 cell_size = Vector3( 2, 1, 2 )
 data = {
@@ -54,5 +57,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0 )
 shape = SubResource( 3 )
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="nice_grid" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
+script = ExtResource( 8 )
+
+[node name="Tween" type="Tween" parent="nice_grid"]
 
 [connection signal="rolled" from="DiceGuard" to="." method="_on_roll"]
