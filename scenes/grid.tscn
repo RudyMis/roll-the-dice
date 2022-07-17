@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/DiceController.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/tiles/oracle.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/camera.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/TileAdder.gd" type="Script" id=4]
 [ext_resource path="res://scenes/nice_grid.tscn" type="PackedScene" id=7]
@@ -10,13 +11,11 @@
 script = ExtResource( 4 )
 
 [node name="Camera" parent="." instance=ExtResource( 3 )]
-transform = Transform( 0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 0, 4, 0.739 )
+transform = Transform( 0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 4, 4, 4 )
 projection = 1
 size = 8.0
 speed = -0.01
 np_dice_controller = NodePath("../DiceController")
-
-[node name="TileAdder" type="Spatial" parent="."]
 
 [node name="MoveTween" type="Tween" parent="."]
 
@@ -29,5 +28,10 @@ script = ExtResource( 8 )
 [node name="Tween" type="Tween" parent="nice_grid"]
 
 [node name="DiceController" parent="." instance=ExtResource( 1 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2 )
+
+[node name="oracle" parent="." instance=ExtResource( 2 )]
+transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0 )
 
 [connection signal="rolled" from="DiceController" to="." method="_on_roll"]
