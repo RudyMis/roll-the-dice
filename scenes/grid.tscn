@@ -14,6 +14,7 @@ script = ExtResource( 4 )
 transform = Transform( 0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 4, 4, 4 )
 projection = 1
 size = 8.0
+speed = -0.01
 np_dice_controller = NodePath("../DiceController")
 
 [node name="MoveTween" type="Tween" parent="."]
@@ -27,6 +28,7 @@ script = ExtResource( 8 )
 [node name="Tween" type="Tween" parent="nice_grid"]
 
 [node name="DiceController" parent="." instance=ExtResource( 1 )]
+
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2 )
 
 [node name="oracle" parent="." instance=ExtResource( 2 )]
